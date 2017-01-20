@@ -8,6 +8,14 @@ var inputValid = function(number) {
   }
 };
 
+var fifteenDivision = function (number) {
+  if ((number % 15) === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 
 // Front-end, user interface logic
 
@@ -22,7 +30,11 @@ $(document).ready(function() {
       $(".results").text("Please type a rational non-negative number!");
     } else {
       for (var index = 1; index <= userInput; index += 1) {
-        $(".results").append(index + " ");
+        if (fifteenDivision(index)) {
+          $(".results").append("ping-pong" + " ");
+        } else {
+          $(".results").append(index + " ");
+        }
       }
     }
 
