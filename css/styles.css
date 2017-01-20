@@ -6,6 +6,23 @@ header {
   background-color: gray;
 }
 
+#explanationCol {
+  color: #FFC300;
+  padding-bottom: 30px;
+  background-color: #900C3F;
+}
+
+#btnFormCol {
+  background-color: #FF5733;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  margin-left: 5px;
+}
+
+form button, input {
+  color: black;
+}
+
 .initially-hidden {
   display: none;
 }

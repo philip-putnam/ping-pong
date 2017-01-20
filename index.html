@@ -16,7 +16,25 @@
       </header>
 
       <div class="row">
-        <div class="pong">
+
+        <div class="col-sm-4" id="explanationCol">
+
+          <div class="pong">
+            <h2>OK</h2>
+            <p>Here's what's gonna happen!</p>
+            <p>You're gonna input a rational non-negative number, then press 'Go!', then the program will count up to your number with the following rules:</p>
+            <ol>
+              <li>Starting at 1, the program will count up to your number by 1, displaying these numbers</li>
+              <li>All numbers divisible by 15 will turn into "ping-pong"</li>
+              <li>All numbers not divisible by 15, but divisible by 5 will be turned into "pong"</li>
+              <li>All numbers not divisible by 15 or 5, but divisible by 3 will be turned into "ping"</li>
+              <li>Feel free to play as many times as you would like!</li>
+            </ol>
+          </div>
+
+        </div>
+
+        <div class="col-sm-4" id="btnFormCol">
 
           <form id="pong-form">
             <label for="user-num">Enter a number here:</label>
@@ -28,8 +46,11 @@
 
         </div>
 
-        <div class="results initially-hidden">
-
+        <div class="col-sm-6" id="resultCol">
+          <div class="results initially-hidden">
+            <h2>Your results:</h2>
+            <span id="results"></span>
+          </div>
         </div>
 
       </div>
