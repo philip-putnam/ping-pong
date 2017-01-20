@@ -28,6 +28,14 @@ var fiveDivision = function(number) {
 
 };
 
+// Function that returns true if an arugment passed into it leaves a remainder (%) of zero when divided by 3.
+var threeDivision = function(number) {
+  if ((number % 3) === 0) {
+    return true;
+  } else {
+    return false;
+  }
+};
 
 // Front-end, user interface logic
 
@@ -46,6 +54,8 @@ $(document).ready(function() {
           $(".results").append("ping-pong" + " ");
         } else if (fiveDivision(index)) {
           $(".results").append("pong" + " ");
+        } else if (threeDivision(index)) {
+          $(".results").append("ping" + " ");
         } else {
           $(".results").append(index + " ");
         }
