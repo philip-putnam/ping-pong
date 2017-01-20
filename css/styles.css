@@ -5,3 +5,7 @@ header {
 .well {
   background-color: gray;
 }
+
+.initially-hidden {
+  display: none;
+}
