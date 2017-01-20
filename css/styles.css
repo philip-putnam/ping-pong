@@ -30,6 +30,17 @@ header {
   margin-top: 5px;
 }
 
+#picCol {
+  margin-left: 5px;
+  margin-top: 5px;
+  padding-left: 0;
+  overflow: hidden;
+}
+
+#picCol img {
+  width: 400px;
+}
+
 form button, input {
   color: black;
 }

@@ -63,6 +63,7 @@ $(document).ready(function() {
     $("#results").text("");
 
     $("#resultCol").show();
+    $("#picCol").slideDown();
 
     // Would parseInt here to be extra safe, however due to html input type="number" it will not work, further verification to ensure that the user input is valid below (function inputValid).
     var userInput = $("input#user-num").val();
