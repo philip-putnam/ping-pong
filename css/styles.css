@@ -6,6 +6,12 @@ header {
   background-color: #52BE80;
 }
 
+.row {
+  float: left;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 .col-sm-4, .col-sm-6 {
   border: 1px solid black;
 }
@@ -39,6 +45,16 @@ header {
 
 #picCol img {
   width: 400px;
+}
+
+#addPics .col-md-2 {
+  overflow: hidden;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+#addPics img {
+  width: 375px;
 }
 
 form button, input {
