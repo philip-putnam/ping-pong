@@ -3,7 +3,11 @@ header {
 }
 
 .well {
-  background-color: gray;
+  background-color: #52BE80;
+}
+
+.col-sm-4, .col-sm-6 {
+  border: 1px solid black;
 }
 
 #explanationCol {
@@ -17,6 +21,13 @@ header {
   padding-top: 5px;
   padding-bottom: 10px;
   margin-left: 5px;
+}
+
+#resultCol {
+  background-color: #BB8FCE;
+  padding-bottom: 10px;
+  margin-left: 5px;
+  margin-top: 5px;
 }
 
 form button, input {

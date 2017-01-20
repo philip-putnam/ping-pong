@@ -37,6 +37,22 @@ var threeDivision = function(number) {
   }
 };
 
+// Function calls functions fifteenDivision, fiveDivision, and threeDivision returning appropriate string or the number inputted if a remainder is found from all functions.
+var control = function(number) {
+  tempArry = ["ping-pong", "pong", "ping"];
+  if (fifteenDivision(number)) {
+    return tempArry[0];
+  } else if (fiveDivision(number)) {
+    return tempArry[1];
+  } else if (threeDivision(number)) {
+    return tempArry[2];
+  } else {
+    return number;
+  }
+
+};
+
+
 // Front-end, user interface logic
 
 $(document).ready(function() {
@@ -46,25 +62,17 @@ $(document).ready(function() {
     // Ensures that user can continuously input data without appending it on previous output
     $("#results").text("");
 
-    $(".results").show();
+    $("#resultCol").show();
 
     // Would parseInt here to be extra safe, however due to html input type="number" it will not work, further verification to ensure that the user input is valid below (function inputValid).
     var userInput = $("input#user-num").val();
 
-// If branch to ensure userInput is a valid number (inputValid), then a for-loop cycling through up to the number starting from indices one. Nested if-branch checks fifteenDivision first to see if index divided by 15 is 0, if so output's "ping-pong", same for fiveDivision and threeDivision with their corresponding outputs, else it returns the value of index.
+    // If branch ensures there are no invalid characters (symbols, letters, etc.). For-loop calls control function to check index to see if the number is divisible by 15, 5, or 3 and then returns it for output.
     if (!inputValid(userInput)) {
       $("#results").text("Please type a rational non-negative number!");
     } else {
       for (var index = 1; index <= userInput; index += 1) {
-        if (fifteenDivision(index)) {
-          $("#results").append("ping-pong" + " ");
-        } else if (fiveDivision(index)) {
-          $("#results").append("pong" + " ");
-        } else if (threeDivision(index)) {
-          $("#results").append("ping" + " ");
-        } else {
-          $("#results").append(index + " ");
-        }
+        $("#results").append(control(index) + " ");
       }
     }
 
