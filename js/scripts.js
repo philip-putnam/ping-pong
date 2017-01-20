@@ -15,12 +15,15 @@ $(document).ready(function() {
   $("#pong-form").submit(function(event) {
     event.preventDefault();
 
+    // Would parseInt here to be extra safe, however due to html input type="number" it will not work, further verification to ensure that the user input is valid below (function inputValid).
     var userInput = $("input#user-num").val();
 
     if (!inputValid(userInput)) {
       $(".results").text("Please type a rational non-negative number!");
     } else {
-      $(".results").text(userInput);
+      for (var index = 1; index <= userInput; index += 1) {
+        $(".results").append(index + " ");
+      }
     }
 
   });

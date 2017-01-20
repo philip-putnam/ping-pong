@@ -25,10 +25,6 @@ _This program prompts the user for a number, upon pressing the submit button the
 * _Input: %_
 * _Output: "Please type a rational non-negative number!"_
 
-### Round non-rational numbers:
-* _Input: 3.634_
-* _Output: 4_
-
 ### Count up to user's number from 1, by 1:
 * _Input: 4_
 * _Output: 1, 2, 3, 4_
