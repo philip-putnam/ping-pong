@@ -1,5 +1,6 @@
 // Back-end, business logic
 
+// Function ensuring that there are not non-number characters in user-number, regular expression (regEx) used checked for non-number (^), is greedy (+), and just in case is global (g) and case-insensitive (i) to cover all the bases. Returns inputValid returns false if the input is invalid, true if valid.
 var inputValid = function(number) {
   if (number.match(/[^0-9]+/gi)) {
     return false;
@@ -8,13 +9,24 @@ var inputValid = function(number) {
   }
 };
 
+// Function that returns true if an argument passed into it leaves a remainder (%) of zero when divided by 15, began with 15 as numbers divisible by 15 are also divisible by 5 and 3. This needed to take precedence over those.
 var fifteenDivision = function (number) {
   if ((number % 15) === 0) {
     return true;
   } else {
     return false;
   }
-}
+};
+
+// Function that returns true if an arugment passed into it leaves a remainder (%) of zero when divided by 5.
+var fiveDivision = function(number) {
+  if ((number % 5) === 0) {
+    return true;
+  } else {
+    return false;
+  }
+
+};
 
 
 // Front-end, user interface logic
@@ -32,6 +44,8 @@ $(document).ready(function() {
       for (var index = 1; index <= userInput; index += 1) {
         if (fifteenDivision(index)) {
           $(".results").append("ping-pong" + " ");
+        } else if (fiveDivision(index)) {
+          $(".results").append("pong" + " ");
         } else {
           $(".results").append(index + " ");
         }
